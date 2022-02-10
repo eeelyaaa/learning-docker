@@ -1,0 +1,17 @@
+version: '3'
+services:
+  product-service: 
+    build:
+      context: ./service
+    ports:
+      - "8000:3000"
+    environment:
+      - test=testvalue
+    volumes: 
+      - type: bind
+      - my-volume:/var/lib/data
+    networks: 
+     - products
+
+volumes:
+  my-volume:
