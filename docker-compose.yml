@@ -2,6 +2,6 @@ version: '3'
 services:
   product-service: 
     build:
-      context: .
+      context: ./service
     ports:
       - "8000:3000"
